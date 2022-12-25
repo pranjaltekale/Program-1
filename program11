@@ -1,0 +1,29 @@
+“ Assignment  No. 7 :
+ Write a python program to store first year percentage of students in array.  Write function for sorting array of floating point numbers in ascending order using  quick sort and display top five scores.
+'''
+
+# Function for accepting the percentage of the Students
+
+def input_percentage():
+    perc = []
+    number_of_students = int(input("Enter the number of Students : "))
+    for i in range(number_of_students):
+        perc.append(float(input("Enter the percentage of Student {0} : ".format(i+1))))
+    return perc
+
+#<--------------------------------------------------------------------------------------------------------------------->
+
+# Function for printing the percentage of the Students
+
+def print_percentage(perc):
+    for i in range(len(perc)):
+        print(perc[i],sep = "\n")
+
+#<--------------------------------------------------------------------------------------------------------------------->
+
+# Function for performing partition of the Data
+
+def percentage_partition(perc,start,end):
+    pivot = perc[start]
+    lower_bound = start + 1
+    upper_bound = end
